@@ -5,6 +5,7 @@ background-image:url("http://cdn.wonderfulengineering.com/wp-content/uploads/201
 }
 </style>
 
+
 {{outlet}}
 <center>
 <img src="https://www.uvu.edu/diningservices/images/tacobell_header.png" alt="some tasty tacos">
@@ -13,7 +14,7 @@ background-image:url("http://cdn.wonderfulengineering.com/wp-content/uploads/201
 
 {{#if isEmpty}}
   {{#each finalList as |thing|}}
-  thing.title
+  {{!-- thing.title --}}
   {{/each}}
 {{/if}}
 </center>
