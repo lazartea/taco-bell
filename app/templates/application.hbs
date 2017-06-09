@@ -9,5 +9,11 @@ background-image:url("http://cdn.wonderfulengineering.com/wp-content/uploads/201
 <center>
 <img src="https://www.uvu.edu/diningservices/images/tacobell_header.png" alt="some tasty tacos">
 <big><h1>What can I get at Taco Bell?</h1></big>
-{{money-setter pushData='printData'}}
+{{money-setter pushData='printData' max=totalCost}}
+
+{{#if isEmpty}}
+  {{#each finalList as |thing|}}
+  thing.title
+  {{/each}}
+{{/if}}
 </center>
