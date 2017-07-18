@@ -2,15 +2,11 @@ import Ember from 'ember';
 
 
 export default Ember.Route.extend({
-  setUpController: function() {
+  setupController: function() {
     this.controllerFor('application').set('totalMenu', this.currentModel.items);
   },
 
-  isEmpty: function() {
-    if (finalList.length > 0) {
-      return true
-    }
-  },
+
 
 
   actions: {
@@ -27,7 +23,7 @@ export default Ember.Route.extend({
         }
 
       }
-      alert("You could get " +finalList+" and still have $" +Number(amt).toFixed(2) + " left!");
+      this.controllerFor('application').set('finalList', finalList);
     }
   },
 
